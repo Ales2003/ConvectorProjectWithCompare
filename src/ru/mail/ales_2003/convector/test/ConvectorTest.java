@@ -59,7 +59,7 @@ public class ConvectorTest {
         Convector convector = cm.getConvector(cId5);
         System.out.println(convector);
         
-        System.out.println("ORDER CONVECTOR WITH COMPARABLE IN ARRAYLIST BY LENGTH ==============");
+        System.out.println("CONVECTOR ORDER BY LENGTH WITH INTERFACE COMPARABLE (METHOD COMPARETO) IN ARRAYLIST  ==============");
         Collections.sort(cm.findConvectors());
         List<Convector> result4 = cm.findConvectors();
         for(Convector c : result4) {
