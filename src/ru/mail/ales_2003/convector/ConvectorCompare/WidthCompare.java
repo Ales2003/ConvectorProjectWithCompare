@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ConvectorCompare;
+package ru.mail.ales_2003.convector.ConvectorCompare;
 
 import java.util.Comparator;
 import ru.mail.ales_2003.convector.entity.Convector;

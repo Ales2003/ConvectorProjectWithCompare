@@ -1,9 +1,9 @@
 
 package ru.mail.ales_2003.convector.test;
 
-import ConvectorCompare.LenghtCompare;
-import ConvectorCompare.ReverceLenghtCompare;
-import ConvectorCompare.WidthCompare;
+import ru.mail.ales_2003.convector.ConvectorCompare.LenghtCompare;
+import ru.mail.ales_2003.convector.ConvectorCompare.ReverceLenghtCompare;
+import ru.mail.ales_2003.convector.ConvectorCompare.WidthCompare;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
