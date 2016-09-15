@@ -24,10 +24,7 @@ public class Convector implements Comparable <Convector> {
     //private String name;
     
   
-    @Override
-    public int compareTo(Convector c) {
-    return length.compareTo(c.getLength());
-    }
+    
    
     
     
@@ -99,15 +96,16 @@ public class Convector implements Comparable <Convector> {
         this.power = power;
     }
 
-    
-
-    
+        
     
     @Override
     public String toString() {
         return "Convector{" + "convectorId=" + convectorId + ", length=" + length + " мм, width=" + width + " мм, depth=" + depth + " мм, price=" + price + " евро, power=" + power + " Вт}";
     }
   
- 
+    @Override
+    public int compareTo(Convector c) {
+         return length.compareTo(c.getLength());
+    }   
     
 }

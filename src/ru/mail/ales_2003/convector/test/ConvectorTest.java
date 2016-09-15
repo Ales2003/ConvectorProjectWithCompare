@@ -1,7 +1,11 @@
 
 package ru.mail.ales_2003.convector.test;
 
+import ConvectorCompare.LenghtCompare;
+import ConvectorCompare.ReverceLenghtCompare;
+import ConvectorCompare.WidthCompare;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import ru.mail.ales_2003.convector.business.ConvectorManager;
 import ru.mail.ales_2003.convector.entity.Convector;
@@ -28,7 +32,7 @@ public class ConvectorTest {
         Convector c4 = new Convector(1000, 220, 75, 95, 105);
         Convector c5 = new Convector(2000, 220, 100, 100, 107);
  
-        System.out.println("ADD CONVECTOR ==============");
+        System.out.println("ADD CONVECTOR ============================");
         Long cId1 = cm.addConvector(c1);
         Long cId2 = cm.addConvector(c2);
         Long cId3 = cm.addConvector(c3);
@@ -39,7 +43,7 @@ public class ConvectorTest {
             System.out.println(c);
         }
         
-        System.out.println("UPDATE CONVECTOR ==============");
+        System.out.println("UPDATE CONVECTOR ============================");
         Convector change = new Convector(cId1, 1000, 280, 100, 120,250);
         cm.updateConvector(change);
         List<Convector> result2 = cm.findConvectors();
@@ -47,7 +51,7 @@ public class ConvectorTest {
             System.out.println(c);
         }
         
-        System.out.println("DELETE CONVECTOR ==============");
+        System.out.println("DELETE CONVECTOR ============================");
         cm.deleteConvector(cId2);
         List<Convector> result3 = cm.findConvectors();
         for(Convector c : result3) {
@@ -55,7 +59,7 @@ public class ConvectorTest {
         }
      
  
-        System.out.println("GET CONVECTOR ==============");
+        System.out.println("GET CONVECTOR ============================");
         Convector convector = cm.getConvector(cId5);
         System.out.println(convector);
         
@@ -66,6 +70,28 @@ public class ConvectorTest {
         System.out.println(c);
         }
         
-    
+        System.out.println("CONVECTOR ORDER BY LENGTH WITH COMPARATOR (METHOD COMPARE) IN ARRAYLIST  ==============");
+        LenghtCompare lenghtComparator = new LenghtCompare();
+        Collections.sort(cm.findConvectors(), lenghtComparator);
+        List<Convector> result5 = cm.findConvectors();
+        for(Convector c : result4) {
+        System.out.println(c);
+        }
+        
+        System.out.println("CONVECTOR REVERCE ORDER BY LENGTH WITH COMPARATOR (METHOD COMPARE) IN ARRAYLIST  ==============");
+        ReverceLenghtCompare reverceLenghtComparator = new ReverceLenghtCompare();
+        Collections.sort(cm.findConvectors(), reverceLenghtComparator);
+        List<Convector> result6 = cm.findConvectors();
+        for(Convector c : result4) {
+        System.out.println(c);
+        }
+        
+        System.out.println("CONVECTOR ORDER BY WIDTH WITH COMPARATOR (METHOD COMPARE) IN ARRAYLIST  ==============");
+        WidthCompare widthComparator = new WidthCompare();
+        Collections.sort(cm.findConvectors(), widthComparator);
+        List<Convector> result7 = cm.findConvectors();
+        for(Convector c : result4) {
+        System.out.println(c);
+        }
     }
 }
