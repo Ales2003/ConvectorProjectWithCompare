@@ -31,6 +31,7 @@ public class ConvectorTest {
         Convector c3 = new Convector(3000, 280, 75, 290, 600);
         Convector c4 = new Convector(1000, 220, 75, 95, 105);
         Convector c5 = new Convector(2000, 220, 100, 100, 107);
+        Convector c6 = new Convector(1500, 280, 100, 110, 300);
  
         System.out.println("ADD CONVECTOR ============================");
         Long cId1 = cm.addConvector(c1);
@@ -38,6 +39,7 @@ public class ConvectorTest {
         Long cId3 = cm.addConvector(c3);
         Long cId4 = cm.addConvector(c4);
         Long cId5 = cm.addConvector(c5);
+        Long cId6 = cm.addConvector(c5);
         List<Convector> result1 = cm.findConvectors();
         for(Convector c : result1) {
             System.out.println(c);
